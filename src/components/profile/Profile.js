@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Description from '../description/description';
 import Stats from '../stats/Stats';
 import css from './profile.module.css';

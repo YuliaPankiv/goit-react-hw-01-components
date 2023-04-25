@@ -1,6 +1,5 @@
 import css from './stats.module.css';
 
-
 export default function Stats({ stats }) {
   return (
     <ul className={css.stats}>
@@ -19,4 +18,3 @@ export default function Stats({ stats }) {
     </ul>
   );
 }
-
