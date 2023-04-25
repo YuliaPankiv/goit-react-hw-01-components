@@ -1,0 +1,25 @@
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+.stats li {
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: calc(100% / 3);
+  border-top: 1px solid rgba(0, 0, 0, 0.294);
+  padding: 10px;
+  color: rgba(0, 0, 0, 50%);
+  background-color: rgba(0, 0, 0, 0.091);
+}
+.quantity {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.stats li:last-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.294);
+}
+.stats li:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.294);
+}

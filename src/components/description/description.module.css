@@ -1,0 +1,25 @@
+.description {
+  display: flex;
+  font-weight: 500;
+  line-height: 15px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 35%;
+  margin-bottom: 15px;
+}
+.name {
+  font-size: larger;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.tag,
+.location {
+  color: rgba(0, 0, 0, 50%);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
