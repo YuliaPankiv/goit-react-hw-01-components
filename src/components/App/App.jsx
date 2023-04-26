@@ -1,6 +1,7 @@
-import Profile from "./profile/Profile";
+import Profile from "../profile/Profile";
 import user from 'components/user';
-
+import data from 'components/data';
+import Statistics from "../statistics/Statistics";
 export default function App(){
   return (
   <>
@@ -11,6 +12,8 @@ export default function App(){
       avatar={user.avatar}
       stats={user.stats}
     />
+    <Statistics title="Upload stats" stats={data} />
+    <Statistics stats={data} />
   </>
   );
 } 

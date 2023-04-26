@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import Description from '../description/description';
-import Stats from '../stats/Stats';
+import Description from './description/description';
+import Stats from './stats/Stats';
 import css from './profile.module.css';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
