@@ -7,6 +7,7 @@ export const StatisticsData = styled.li`
   border: 1px solid rgba(0, 0, 0, 0.294);
   padding: 10px;
   color: rgba(0, 0, 0, 50%);
+  background-color: ${color => color.color};
 `;
 
 export const Percentage = styled.span`

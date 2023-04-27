@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import PageTitle from 'components/statistics/PageTitle/PageTitle';
 import StatData from 'components/statistics/statData/StatData';
-import { Container, StatisticsList } from './statistics.styled';
+import { Section, StatisticsList } from './statistics.styled';
 
 export default function Statistics({ title, stats }) {
   return (
-    <Container>
+    <Section>
       {title && <PageTitle title={title} />}
       <StatisticsList>
         {stats.map(({ id, label, percentage }) => (
           <StatData key={id} label={label} percentage={percentage} />
         ))}
       </StatisticsList>
-    </Container>
+    </Section>
   );
 }
 

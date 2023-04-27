@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import setBg from 'components/utils/setBg';
+import setBgRender from 'components/utils/setBgRender';
 import { StatisticsData, Percentage, Label } from './StatData.styled';
 
 export default function StatData({ label, percentage }) {
   return (
-    <StatisticsData style={{ backgroundColor: setBg() }}>
+    <StatisticsData color={setBgRender()}>
       <Label>{label}</Label>
       <Percentage>{percentage}%</Percentage>
     </StatisticsData>
