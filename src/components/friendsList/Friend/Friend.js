@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { FriendInfo, Status } from './Friend.styled';
 
-export default function Friend({ id, name, avatar, isOnline }) {
+export default function Friend({ name, avatar, isOnline }) {
   return (
     <FriendInfo isOnline={isOnline}>
       {isOnline}
@@ -10,3 +11,9 @@ export default function Friend({ id, name, avatar, isOnline }) {
     </FriendInfo>
   );
 }
+
+Friend.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};

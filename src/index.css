@@ -39,5 +39,6 @@ body {
 
   font-family: sans-serif;
   line-height: 1.5;
-  background-image: linear-gradient(to right, #e66465, #9198e5);
+  /* background-image: linear-gradient(to right, #e66465, #9198e5); */
+  background-image: linear-gradient(to right, #04ffe257, #ffe50061);
 }
