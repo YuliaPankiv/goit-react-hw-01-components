@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { isOdd, isShadow } from 'components/utils/isOdd';
 
 export const Table = styled.table`
   overflow: hidden;
@@ -16,14 +17,12 @@ export const Table = styled.table`
   td {
     padding: 10px;
   }
-  tr:nth-child(odd) {
-    background: #dcdcdcd9;
-    box-shadow: 0px 0px 16px 5px #262625ad;
-  }
-  tr:nth-child(even) {
-    background: rgba(0, 0, 0, 0.294);
-  }
+
   tr:hover td {
     background: #e8edff;
   }
+`;
+export const Tr = styled.tr`
+  background: ${isOdd};
+  box-shadow: ${isShadow};
 `;

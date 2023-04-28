@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
+import { Tr } from './TableStyle.styled';
 
-export default function Transaction({ amount, type, currency }) {
+export default function Transaction({ amount, type, currency, n }) {
   return (
-    <tr>
+    <Tr n={n}>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
-    </tr>
+    </Tr>
   );
 }
 Transaction.propTypes = {
+  n: PropTypes.number.isRequired,
   type: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,

@@ -5,18 +5,23 @@ import { Table } from './TableStyle.styled';
 import Header from './Header';
 
 export default function TransactionHistory({ items }) {
+  let n = 1;
   return (
     <Table>
       <Header />
       <tbody>
-        {items.map(items => (
-          <Transaction
-            key={items.id}
-            type={items.type}
-            amount={items.amount}
-            currency={items.currency}
-          ></Transaction>
-        ))}
+        {items.map(items => {
+          items.n = n++;
+          return (
+            <Transaction
+              key={items.id}
+              type={items.type}
+              amount={items.amount}
+              currency={items.currency}
+              n={items.n}
+            ></Transaction>
+          );
+        })}
       </tbody>
     </Table>
   );
