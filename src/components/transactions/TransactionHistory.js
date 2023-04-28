@@ -1,15 +1,11 @@
-import Transactions from 'components/transactions/Transactions/Transactions';
-import { Table } from './TransactionHistory.styled';
+import Transactions from 'components/transactions/Transactions';
+import { Table } from './TableStyle.styled';
+import Header from './Header';
+
 export default function TransactionHistory({ items }) {
   return (
     <Table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+      <Header />
       <tbody>
         {items.map(items => (
           <Transactions
