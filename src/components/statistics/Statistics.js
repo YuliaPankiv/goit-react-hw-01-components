@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import setBgRender from 'components/utils/setBgRender';
 
 import {
   Label,
@@ -8,7 +9,6 @@ import {
   StatisticsList,
   Title,
 } from './statistics.styled';
-import setBgRender from 'components/utils/setBgRender';
 
 export default function Statistics({ title, stats }) {
   return (

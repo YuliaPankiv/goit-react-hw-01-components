@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-
 import { Table, Tr } from './TableStyle.styled';
 
 export default function TransactionHistory({ items }) {
   items.n = 1;
-  console.log(items.n);
   return (
     <Table>
       <thead>

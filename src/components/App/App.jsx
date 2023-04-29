@@ -1,14 +1,13 @@
-import Profile from "components/profile/Profile";
-
 import data from 'components/dataJson/data';
 import user from 'components/dataJson/user';
 import friends from 'components/dataJson/friends';
 import transactions from 'components/dataJson/transactions' ;
 
+import Profile from "components/profile/Profile";
 import FriendList from "components/friendsList/FriendsList";
 import TransactionHistory from "components/transactions/TransactionHistory";
+import Statistics from "components/statistics/Statistics";
 
-import Statistics from "../statistics/Statistics";
 import { Container } from "components/App/App.styled";
 
 export default function App(){
