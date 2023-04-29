@@ -1,9 +1,10 @@
-import PropTypes, { array } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { Table, Tr } from './TableStyle.styled';
 
 export default function TransactionHistory({ items }) {
-  let n = 1;
+  items.n = 1;
+  console.log(items.n);
   return (
     <Table>
       <thead>
@@ -14,10 +15,10 @@ export default function TransactionHistory({ items }) {
         </tr>
       </thead>
       <tbody>
-        {items.map(({ type, amount, currency, n, id }) => {
-          items.n = n++;
+        {items.map(({ id, type, amount, currency }) => {
+          items.n++;
           return (
-            <Tr key={id} n={n}>
+            <Tr key={id} n={items.n}>
               <td>{type}</td>
               <td>{amount}</td>
               <td>{currency}</td>

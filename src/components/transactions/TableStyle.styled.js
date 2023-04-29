@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { isOdd, isShadow } from 'components/utils/isOdd';
+// import { isOdd, isShadow } from 'components/utils/isOdd';
 
 export const Table = styled.table`
   overflow: hidden;
@@ -23,6 +24,6 @@ export const Table = styled.table`
   }
 `;
 export const Tr = styled.tr`
-  background: ${isOdd};
+  background-color: ${isOdd};
   box-shadow: ${isShadow};
 `;
