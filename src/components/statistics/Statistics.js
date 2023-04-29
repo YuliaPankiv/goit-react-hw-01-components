@@ -1,15 +1,25 @@
 import PropTypes from 'prop-types';
-import PageTitle from 'components/statistics/PageTitle/PageTitle';
-import StatData from 'components/statistics/statData/StatData';
-import { Section, StatisticsList } from './statistics.styled';
+
+import {
+  Label,
+  Percentage,
+  Section,
+  StatisticsData,
+  StatisticsList,
+  Title,
+} from './statistics.styled';
+import setBgRender from 'components/utils/setBgRender';
 
 export default function Statistics({ title, stats }) {
   return (
     <Section>
-      {title && <PageTitle title={title} />}
+      {title && <Title>{title}</Title>}
       <StatisticsList>
         {stats.map(({ id, label, percentage }) => (
-          <StatData key={id} label={label} percentage={percentage} />
+          <StatisticsData key={id} color={setBgRender()}>
+            <Label>{label}</Label>
+            <Percentage>{percentage}%</Percentage>
+          </StatisticsData>
         ))}
       </StatisticsList>
     </Section>

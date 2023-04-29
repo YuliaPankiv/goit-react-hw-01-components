@@ -1,19 +1,40 @@
-import PropTypes from 'prop-types';
-import Description from './description/description';
-import Stats from './stats/Stats';
-import css from './profile.module.css';
+import PropTypes, { arrayOf } from 'prop-types';
+import {
+  Avatar,
+  Description,
+  ItemStats,
+  Label,
+  List,
+  ProfileBox,
+  Quantity,
+  UserInfo,
+  UserName,
+} from './profile.styled';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div className={css.profile}>
-      <Description
-        avatar={avatar}
-        username={username}
-        tag={tag}
-        location={location}
-      />
-      <Stats stats={stats} />
-    </div>
+    <ProfileBox>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <UserName>{username}</UserName>
+        <UserInfo>@{tag}</UserInfo>
+        <UserInfo>{location}</UserInfo>
+      </Description>
+      <List>
+        <ItemStats>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </ItemStats>
+        <ItemStats>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </ItemStats>
+        <ItemStats>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </ItemStats>
+      </List>
+    </ProfileBox>
   );
 }
 Profile.propTypes = {
